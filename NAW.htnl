@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sauter Wijnen</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+
+    <script type="text/javascript" src="js/autocomplete.js"></script>
+    <script type="text/javascript">
+        var pro6pp_auth_key = "D6KKWS2hjRemE1NP";
+        $(document)
+            .ready(function() {
+                $(".address")
+                    .applyAutocomplete();
+            });
+
+    </script>
+
+    <script type="text/javascript">
+        var s = window.location.href;
+        var queryString = s.substring(s.lastIndexOf("?") + 1);
+        var newQueryString = $.map(queryString.split("&"), function(pair) {
+                var p = pair.split("=");
+                if (p[1] == "general") {
+                    p[1] = "styles";
+                    return p.join("=");
+                } else {
+                    return pair;
+
+                }
+            })
+            .join("&");
+
+    </script>
+
+    <style>
+        .logoRotatie {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            margin: -150px 0 0 -150px;
+            -webkit-animation: spin 16s linear infinite;
+            -moz-animation: spin 16s linear infinite;
+            animation: spin 16s linear infinite;
+        }
+
+        #header {
+            margin-left: 20%;
+            margin-right: 20%
+        }
+
+        img:hover {
+            cursor: default;
+            transform: rotate(360deg);
+            transition: all 1.2s ease-in-out 0s;
+        }
+
+        .BIG {
+            font-size: 40px;
+        }
+
+    </style>
+
+</head>
+
+<body font-family="Raleway" style="background-color:#ccc;padding:0px;margin:0px;">
+    <div id="figure">
+    </div>
+
+    <div id="header">
+        <div style="background-color:#000;padding-bottom:0px;margin:0px;;" class="vestiging">
+            <h1 style="color:#fff;text-align:right;font-size:16px;margin-right:26%;">Vestiging Maastricht <img src="http://ftp.sauterwijnen.nl/svg/sauter_ster_wit.svg" style="height:45px;align:right;verticalAlign:middle;margin-left:6px;margin-right:0px;margin-top:8px;margin-bottom:8px;"></h1>
+        </div>
+
+        <form pro6pp-autocomplete="" action="" class="address form-horizontal ng-pristine ng-valid" ID="FormID" name="FormNAME">
+
+            <fieldset class="form-item fields name required">
+
+                <div id="wrap">
+                    <div id="left_col" style="float:left; width:50%; ">
+
+                        <div class="form-group"><label class="col-sm-4 control-label" for="E-mail" translate=""><span class="ng-scope">E-mail</span></label>
+                            <div class="col-sm-8"><input class="E-mail form-control" id="Email" placeholder="*.*@***.**" name="email" onfocusout="OnFocusOutForm(event)" onfocus="OpnieuwEmailcontrole()" onKeyUp="OpnieuwEmailcontrole()"></div>
+                        </div>
+
+                    </div>
+                    <div id="right_col" style="float:right; width:50%;">
+
+                        <div class="form-group"><label class="col-sm-4 control-label" for="vestiging" translate=""><span class="ng-scope">Klantenkortingsgroep</span></label>
+                            <div class="col-sm-8">
+                                <select class="titelatuur form-control" id="vestiging" placeholder="Klantenkortingsgroep" required="" autocomplete="off" name="Klantenkortingsgroep">
+		<option value="P">P</option>
+		<option value="BUSSUM">BUSSUM</option>
+		<option value="HILVERSUM">HILVERSUM</option>
+		<option value="NIJMEGEN">NIJMEGEN</option>
+		<option value="VELP">VELP</option>
+		<option value="ZEIST">ZEIST</option>
+		<option value="WYCK">WYCK</option>
+		<option value="P">H</option>
+		<option value="P">W</option>
+
+		</select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-group"><label class="col-sm-4 control-label" for="bedrijfsnaam" translate=""><span class="ng-scope">Bedrijfsnaam</span></label>
+                    <div class="col-sm-8"><input class="bedrijfsnaam form-control" id="bedrijfsnaam" placeholder="Bedrijfsnaam" autocomplete="off" name="naam"></div>
+                </div>
+
+                <div class="form-group"><label class="col-sm-4 control-label" for="titelatuur" translate=""><span class="ng-scope">titelatuur</span></label>
+                    <div class="col-sm-8">
+                        <select class="titelatuur form-control" id="titelatuur" placeholder="Titelatuur" required="" autocomplete="off" name="TitelCode">
+<option value="HR">De heer</option>
+<option value="MV">Mevrouw</option>
+<option value="HC">De heer en/of mevrouw</option>
+<option value="HM">De heer en mevrouw</option>
+<option value="DS">De Weledelgeleerde Heer</option>
+<option value="DI">Directie</option>
+<option value="MR">De Weledelgestrenge Heer</option>
+<option value="FI">Familie  </option>
+<option value="DR">Dokter</option>
+<option value="IR">De Weledelgestrenge Heer</option>
+<option value="DT">Directie Restaurant    </option>
+<option value="WG">De Weledelgeleerde Heer</option>
+<option value="HH">Hooggeleerde Heer</option>
+<option value="RT">Restaurant</option>
+<option value="GV">De Weledelgeleerde Vrouwe</option>
+<option value="FA">Firma</option>
+<option value="MM">Mr. and Mrs.    </option>
+<option value="MI">Mijnheer</option>
+<option value="HS">De Hoogedelgestrenge Heer</option>
+<option value="HJ">De Hoogedelgeleerde Heer</option>
+<option value="EH">De Eerwaarde Heer</option>
+<option value="HN">Herrn</option>
+<option value="HW">De Hoogwelgeboren Heer</option>
+<option value="WV">De Weledelgestrenge Vrouwe</option>
+<option value="VW">De Weledelgeboren Vrouwe</option>
+<option value="WY">Wijnhandel</option>
+<option value="EN">De heren</option>
+<option value="VG">Vereniging</option>
+<option value="VP">De Hooggeleerde Vrouwe</option>
+<option value="DD">De dames</option>
+<option value="HF">Herrn und Frau</option>
+<option value="AB">Architectenbureau</option>
+<option value="BH">Het Bestuur van het</option>
+<option value="PM">Penningmeester</option>
+<option value="BS">Het Bestuur van de Stichting</option>
+<option value="RK">Restaurant & kwekerij</option>
+<option value="ZV">Wijnhandel - Slijterij</option>
+<option value="DO">Domaines</option>
+<option value="MN">Maison   </option>
+<option value="P">President</option>
+<option value="GZ">De Weledelzeergeleerde Vrouwe</option>
+<option value="MA">Maatschap</option>
+<option value="ZH">Zijne Exelentie</option>
+<option value="EA">De Edelachtbare Heer</option>
+<option value="MU">Monsieur</option>
+<option value="ST">Stichting</option>
+<option value="JH">Jonkheer</option>
+<option value="DA">Directie Apotheek</option>
+</select>
+                    </div>
+                </div>
+
+
+
+                <div id="wrap">
+                    <div id="left_col" style="float:left; width:30%; ">
+
+
+                        <div class="form-group"><label class="col-sm-4 control-label" for="voornaam" translate=""><span class="ng-scope">Initialen/voornaam</span></label>
+                            <div class="col-sm-8"><input class="voornaam form-control" id="voornaam" placeholder="Initialen/voornaam" required="" autocomplete="off" name="Voornaam"></div>
+                        </div>
+
+                    </div>
+                    <div id="right_col" style="float:right; width:70%;">
+
+
+                        <div class="form-group"><label class="col-sm-4 control-label" for="achternaam" translate=""><span class="ng-scope">Achternaam</span></label>
+                            <div class="col-sm-8"><input class="achternaam form-control" id="achternaam" placeholder="Achternaam" required="" autocomplete="off" name="Naam 2" onKeyUp="SetAanhef();"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-group"><label class="col-sm-4 control-label" for="aanhef" translate=""><span class="ng-scope">Aanhef</span></label>
+                    <div class="col-sm-8"><input class="achternaam form-control" id="aanhef" placeholder="Aanhef" required="" autocomplete="off" name="aanhef" required=""></div>
+                </div>
+
+                <div class="form-group">
+                    <table width="100%">
+                        <tr>
+                            <td width="33%">
+
+                                <label class="col-sm-4 control-label" for="postcode" translate=""><span class="ng-scope">Postcode</span></label>
+                                <div class="col-sm-8"><input class="postcode form-control" id="postcode" placeholder="9999AB" required="" autocomplete="off" name="postcode"></div>
+
+                            </td>
+                            <td width="33%">
+
+
+                                <label class="col-sm-4 control-label" for="streetnumber" translate=""><span class="ng-scope">Huisnummer</span></label>
+                                <div class="col-sm-8"><input class="streetnumber form-control" id="streetnumber" placeholder="10" required="" autocomplete="off" name="huisnummer" onfocusout="CheckKIX()" onfocus="OpnieuwKixcontrole()"></div>
+                            </td>
+                            <td width="33%">
+
+                                <label class="col-sm-4 control-label" for="extension" translate=""><span class="ng-scope">Toevoeging</span></label>
+                                <div class="col-sm-8"><input class="extension form-control" id="extension" placeholder="A" autocomplete="off" name="Toevoeging" onfocusout="CheckKIX()" onfocus="OpnieuwKixcontrole()"></div>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
+
+                <div class="form-group">
+                    <div class="col-sm-8 col-sm-offset-4">
+                        <p class="message"></p>
+                    </div>
+                </div>
+
+                <div id="wrap">
+                    <div id="left_col" style="float:left; width:50%; ">
+
+                        <div class="form-group"><label class="col-sm-4 control-label" for="street" translate=""><span class="ng-scope">Straatnaam</span></label>
+                            <div class="col-sm-8"><input class="street form-control" id="street" name="straat"></div>
+                        </div>
+
+                    </div>
+                    <div id="right_col" style="float:right; width:50%;">
+
+                        <div class="form-group"><label class="col-sm-4 control-label" for="city" translate=""><span class="ng-scope">Plaats</span></label>
+                            <div class="col-sm-8"><input class="city form-control" id="city" name="plaats"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-8"><input class="province form-control" id="province" readonly="" name="provintie"></div>
+                </div>
+
+                <table width="100%">
+                    <tr>
+                        <td width="33%">
+                            <div class="form-group"><label class="col-sm-4 control-label" for="Telefoonnummer" translate=""><span class="ng-scope">Telefoonnummer</span></label>
+                                <div class="col-sm-8"><input class="Telefoonnummer form-control" id="Telefoonnummer" placeholder="Telefoonnummer" name=Telefoon></div>
+                            </div>
+                        </td>
+                        <td width="33%">
+                            <div class="form-group"><label class="col-sm-4 control-label" for="Aktiecode" translate=""><span class="ng-scope">Aktiecode</span></label>
+                                <div class="col-sm-8">
+                                    <select class="Aktiecode form-control" id="Aktiecode" placeholder="Aktiecode" name=Aktiecode>
+						<option value=""></option>
+						<option value="319">Chateau Maastricht 2015</option>
+						<option value="320">Netwerk Zuid 09-11-15</option>
+					</select>
+                                </div>
+                            </div>
+                        </td>
+                        <td width="33%">
+                            <div class="form-group"><label class="col-sm-4 control-label" for="Klantnummer" translate=""><span class="ng-scope">Klantnummer</span></label>
+                                <div class="col-sm-8"><input class="Klantnummer form-control" id="Klantnummer" placeholder="Nieuw uniek klantnummer" name="Nr_NIEUW" required=""></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <div style="text-align:center;"><label><span >Mailing per post ontvangen</span></label> <input type="checkbox" id="Mailing per post ontvangen" name="Mailing per post ontvangen"><span style="margin-left:20px;margin-right:20px"> | </span><label><span class="ng-scope">E-Mail nieuwsbrief</span></label> <input type="checkbox" id="E-Mail nieuwsbrief" name="E-Mail nieuwsbrief"></div>
+
+
+                <iframe ID="NieuwKlantNr" name="NieuwKlantNr" width="0" height="0" frameBorder="0" src="../php_script/autosuggest/index_klantnr.php" style="visibility:hidden;"></iframe>
+
+            </fieldset>
+            <center>
+
+                <a id="verder" onclick="ControlForm();" style="visibility:hidden;">
+                    << VERDER>>
+                </a>
+
+                <a id="InNav" onclick="InhoudForm();" style="visibility:hidden;">
+                    << ZET IN NAVISION>>
+                </a>
+
+            </center>
+
+
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function NieuwNummer() {
+            //var iFrame =  document.getElementById('NieuwKlantNr');
+            //var iFrameBody= iframe.contentDocument || iframe.contentWindow.document;
+            //content= iFrameBody.getElementsByTagName('body')[0].innerHTML;
+            var strip = window.frames['NieuwKlantNr'].document.body.innerHTML;
+            var lines = strip.split('<li');
+
+            for (var lineNo = 0; lineNo < lines.length; lineNo++) {
+                var line = lines[lineNo];
+            }
+            //alert(line.substring(16, 26));
+            document.getElementById('Klantnummer')
+                .value = line.substring(16, 26);
+            document.getElementById('verder')
+                .style.visibility = 'visible';
+        }
+
+    </script>
+    <script type="text/javascript">
+        function CheckKIX() {
+
+            var iframekix = document.createElement("iframe")
+                , iframeWindow;
+            iframekix.src = "checkkix.php?kix=" + document.getElementById('postcode')
+                .value.replace(' ', '') + document.getElementById('streetnumber')
+                .value + document.getElementById('extension')
+                .value;
+            iframekix.id = "kixcheck";
+            iframekix.name = "kixcheck";
+            iframekix.style.position = "absolute";
+            iframekix.style.top = "50%";
+            iframekix.style.left = "50%";
+            iframekix.style.visibility = "hidden";
+            document.body.appendChild(iframekix);
+            document.getElementById('verder')
+                .style.visibility = 'visible';
+            document.getElementById('InNav')
+                .style.visibility = 'hidden';
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        function OnFocusInForm(event) {
+            event.srcElement.style.color = "red";
+        }
+
+        function OnFocusOutForm(event) {
+            event.srcElement.style.color = "";
+
+            if (event.srcElement.value != 'geen') {
+
+                var iframe = document.createElement("iframe")
+                    , iframeWindow;
+
+                iframe.src = "emailvalidation/emailcontrole.php?email=" + event.srcElement.value;
+                iframe.id = "emailcheck";
+                iframe.name = "emailcheck";
+                iframe.style.position = "absolute";
+                iframe.style.top = "50%";
+                iframe.style.left = "50%";
+                iframe.style.visibility = "hidden";
+                document.body.appendChild(iframe);
+
+                document.getElementById('verder')
+                    .style.visibility = 'visible';
+                document.getElementById('InNav')
+                    .style.visibility = 'hidden';
+            }
+        }
+
+    </script>
+    <script type="text/javascript">
+        function OpnieuwEmailcontrole() {
+            var elem = document.getElementById("emailcheck");
+            if (document.getElementById("emailcheck")) {
+                elem.parentElement.removeChild(elem);
+            }
+            document.getElementById('notification')
+                .innerHTML = '<a href="#"><img onclick="javascript:document.getElementById(\'notification\').style.visibility= \'hidden\';" src="http://ftp.sauterwijnen.nl/svg/sauter_ster_zwart.svg" style="height:40px;align:right;verticalAlign:middle;margin-left:10px;margin-bottom:20px;margin-Right:10px;" onmouseover="this.style.opacity=0.6;" onmouseout="this.style.opacity=1;"></a><br><span class="BIG">WAARSCHUWING!</span><p></p>';
+            var nkframe = document.getElementById("nk");
+            if (document.getElementById("nk")) {
+                nkframe.parentElement.removeChild(nkframe);
+            }
+            document.getElementById('verder')
+                .style.visibility = 'visible';
+            document.getElementById('InNav')
+                .style.visibility = 'hidden';
+            document.getElementById('notification')
+                .style.backgroundColor = "rgba(240,240,240,0.90)";
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        function OpnieuwKixcontrole() {
+            var elem = document.getElementById("kixcheck");
+            if (document.getElementById("kixcheck")) {
+                elem.parentElement.removeChild(elem);
+            }
+            document.getElementById('notification')
+                .innerHTML = '<a href="#"><img onclick="javascript:document.getElementById(\'notification\').style.visibility= \'hidden\';" src="http://ftp.sauterwijnen.nl/svg/sauter_ster_zwart.svg" style="height:40px;align:right;verticalAlign:middle;margin-left:10px;margin-bottom:20px;margin-Right:10px;" onmouseover="this.style.opacity=0.6;" onmouseout="this.style.opacity=1;"></a><br><span class="BIG">WAARSCHUWING!</span><p></p>';
+            document.getElementById('verder')
+                .style.visibility = 'visible';
+            document.getElementById('InNav')
+                .style.visibility = 'hidden';
+            document.getElementById('notification')
+                .style.backgroundColor = "rgba(240,240,240,0.90)";
+        }
+
+    </script>
+
+    <div id="emailcontrole"></div>
+
+    <script type="text/javascript">
+        function SetAanhef() {
+            aanhefPart = document.FormNAME.elements['titelatuur'].options[titelatuur.selectedIndex].innerHTML.replace('De ', '');
+            aanhefPart = aanhefPart.toLowerCase();
+            document.FormNAME.elements['aanhef'].value = aanhefPart + ' ' + document.getElementById('achternaam')
+                .value;
+            var ifrm = document.getElementById('NieuwKlantNr');
+            var win = ifrm.contentWindow;
+            var doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
+            // input overzetten naar iframe en laten zoeken naar klantnummer
+            var fld = doc.forms['myform'].elements['country'];
+            var naam = document.getElementById('achternaam')
+                .value.replace('van ', '');
+            naam = naam.replace('de ', '');
+            naam = naam.replace('der ', '');
+            naam = naam.replace('den ', '');
+            fld.value = naam.substring(0, 4);
+            //functie suggest aansturen met eerste 4 karakters van de achternaam
+            document.getElementById('NieuwKlantNr')
+                .contentWindow.suggest(fld.value);
+
+        }
+
+    </script>
+    <script type="text/javascript">
+        function ControlForm() {
+
+            //controles verwerken
+            var nota = document.getElementById('notification');
+            nota.style.position = "absolute";
+            nota.style.left = "0px";
+            nota.style.top = "10%";
+            nota.style.margin = "0px 0 0 0px";
+            nota.style.width = "100%";
+            nota.style.height = "600px";
+            nota.style.padding = "30px 30% 30px 30%";
+            nota.style.backgroundColor = "rgba(240,240,240,0.90)";
+            nota.style.border = "1px solid #ccc";
+            nota.style.borderRadius = "0px";
+            //nota.style.visibility= 'visible';
+
+
+            if (window.frames['kixcheck'].document.body.innerHTML.search('WAARSCHUWING!') > 0) {
+                nota.style.visibility = "visible";
+                var dubbelkix = window.frames['kixcheck'].document.body.innerHTML.search('WAARSCHUWING!');
+                nota.innerHTML = nota.innerHTML + '<hr><b>' + (window.frames['kixcheck'].document.body.innerHTML.substring(dubbelkix)) + '</b><hr>';
+            } else
+
+            if (window.frames['emailcheck'].document.body.innerHTML.search('<hr>0<hr>') > 2) {
+                nota.style.visibility = "visible";
+                nota.innerHTML = nota.innerHTML + (document.getElementById('Email')
+                    .value + ' is geen geldig e-mail adres omdat de samenstelling niet klopt of omdat het geen geldige mailserver naam is.');
+            } else
+
+            if (window.frames['emailcheck'].document.body.innerHTML.search('<hr>-1<hr>') > 2) {
+                nota.style.visibility = "visible";
+                nota.innerHTML = nota.innerHTML + (document.getElementById('Email')
+                    .value + ' kan niet als geldig e-mail adres bepaadt worden. De e-mail server reageerd niet.');
+            } else
+
+            if (window.frames['emailcheck'].document.body.innerHTML.search('WAARSCHUWING!') > 0) {
+                nota.style.visibility = "visible";
+                var dubbelemail = window.frames['emailcheck'].document.body.innerHTML.search('WAARSCHUWING!');
+                nota.innerHTML = nota.innerHTML + '<hr><b>' + (window.frames['emailcheck'].document.body.innerHTML.substring(dubbelemail)) + '</b><hr>';
+            }
+
+            InNavCheck = window.frames['emailcheck'].document.body.innerHTML.search('WAARSCHUWING!') + window.frames['kixcheck'].document.body.innerHTML.search('WAARSCHUWING!');
+
+            //alert(InNavCheck);
+            //alert(window.frames['emailcheck'].document.readyState);
+
+            if ((InNavCheck < 0) && (window.frames['emailcheck'].document.readyState = 'complete'))
+
+            {
+                document.getElementById('verder')
+                    .style.visibility = 'hidden';
+                document.getElementById('InNav')
+                    .style.visibility = 'visible';
+            }
+
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        function InhoudForm() {
+            //formwaarden indien geen waarschuwing opnemen
+            var params;
+            var qline = 'create table nk as select ';
+            for (i = 0; i < document.FormNAME.elements.length; i++) {
+                var fieldName = document.FormNAME.elements[i].name;
+                var fieldValue = document.FormNAME.elements[i].value;
+                var fieldType = document.FormNAME.elements[i].type;
+
+                // use the fields, put them in a array, etc.
+
+                // or, add them to a key-value pair strings, 
+                // as in regular POST
+                if ((typeof fieldName !== "undefined")) {
+                    params += fieldName + '=' + fieldValue + '&';
+
+
+
+                    if (fieldName != '') {
+
+                        if (fieldType == 'checkbox') {
+                            fieldValue = document.FormNAME.elements[fieldName].checked;
+                        }
+
+                        qline += ' "' + fieldValue + '" as `' + fieldName + '`, ';
+                    }
+                }
+            }
+
+            qline += ' "' + document.getElementById('postcode')
+                .value.replace(' ', '') + document.FormNAME.elements["huisnummer"].value + document.FormNAME.elements["Toevoeging"].value + '" as `KIX`;'
+
+            if (document.getElementById("nk")) {
+                elem.parentElement.removeChild(elem);
+            }
+
+            var qframe = document.createElement("iframe")
+                , iframeWindow;
+
+            qframe.src = "nk.php?q=" + qline;
+            qframe.id = "nk";
+            qframe.name = "nk";
+            qframe.style.position = "absolute";
+            qframe.style.top = "50%";
+            qframe.style.left = "50%";
+            qframe.style.visibility = "hidden";
+            document.body.appendChild(qframe);
+            var nota = document.getElementById('notification');
+            nota.style.borderRadius = "0px";
+            nota.innerHTML = '<img class="logoRotatie" src="http://ftp.sauterwijnen.nl/svg/Sauter_Ster_Wit_Outline.svg" style="height:300px;align:right;verticalAlign:middle;">'
+            nota.style.visibility = 'visible';
+            nota.style.backgroundColor = "rgba(200,200,200,0.70)";
+            nota.style.left = "0px";
+            nota.style.top = "0px";
+            nota.style.margin = "0 0 0 0";
+            nota.style.height = "100%";
+
+            function hideIt() {
+                document.getElementById("notification")
+                    .style.visibility = "hidden";
+                document.getElementById("FormID")
+                    .reset();
+                document.getElementById('verder')
+                    .style.visibility = 'hidden';
+                document.getElementById('InNav')
+                    .style.visibility = 'hidden';
+
+            }
+            setTimeout(hideIt, 5000);
+        }
+
+    </script>
+
+    <div id="notification" style="visibility:hidden;">
+        <a href="#"><img onclick="javascript:document.getElementById('notification').style.visibility= 'hidden';" src="http://ftp.sauterwijnen.nl/svg/sauter_ster_zwart.svg" style="height:40px;align:right;verticalAlign:middle;margin-left:10px;margin-bottom:20px;margin-Right:10px;"onmouseover="this.style.opacity=0.6;" onmouseout="this.style.opacity=1;"></a> <br><span class="BIG">WAARSCHUWING!</span>
+        <p></p>
+    </div>
+
+    <div id="qlines">
+
+    </div>
+
+
+
+</body>
+
+</html>
