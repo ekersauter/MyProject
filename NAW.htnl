@@ -11,7 +11,7 @@
 
     <script type="text/javascript" src="js/autocomplete.js"></script>
     <script type="text/javascript">
-        var pro6pp_auth_key = "D6KKWS2hjRemE1NP";
+        var pro6pp_auth_key = "{authKey}";
         $(document)
             .ready(function() {
                 $(".address")
